@@ -18,8 +18,3 @@ jobs:
       - name: node_version
         run: node --version
 
-      - name: php
-        use: shivammathur/setup-php@v2
-        with:
-          php-version: "8.3"
-
