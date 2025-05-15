@@ -10,4 +10,4 @@ jobs:
       - name: ls
         uses: './.github/actions/my-action'
         with:
-          message: " galaxy"
+          message: "galaxy"
