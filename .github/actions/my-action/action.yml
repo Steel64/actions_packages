@@ -1,10 +1,16 @@
 name: "my action"
 description: "test my action"
 
+inputs:
+  message:
+    description: "message to print"
+    required: true
+    default: "mundo"
+
 runs:
   using: "composite"
 
   steps:
     - name: "Hola mundo"
-      run: echo "Hola mundo"
+      run: echo "Hola ${{ inputs.message }}"
       shell: bash
