@@ -12,6 +12,10 @@ jobs:
         uses: actions/setup-node@v4.4.0
         with:
           node-version: 'latest'
+      - name: php
+        use: shivammathur/setup-php@2.33.0
+        with:
+          php-version: "8.3"
       - name: node_version
         run: node --version
 
