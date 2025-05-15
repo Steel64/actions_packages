@@ -6,18 +6,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
+
       - name: ls
         run: ls -al
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.4.0
         with:
           node-version: 'latest'
+        
       - name: node_version
         run: node --version
+
       - name: php
-        use: shivammathur/setup-php@2.33.0
+        use: shivammathur/setup-php@v2
         with:
           php-version: "8.3"
+        
       - name: php_version
         run: php --version
 
