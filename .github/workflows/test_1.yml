@@ -5,17 +5,10 @@ on : [push]
 jobs:
   say-hello:
     runs-on : ubuntu-latest
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: root
-        ports:
-          - 3306:3306
-      redis:
-        image: redis
-        ports:
-          - 6379:6379
+
+    env:
+      MY_var: Mi variable de enterno a nivel de job
+
     steps:
       - name: test
-        run: ls
+        run: echo "valor: $MY_var"
