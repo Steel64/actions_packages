@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: test
-        run: echo "valor: $MY_var"
+        run: echo "valor $MY_var"
