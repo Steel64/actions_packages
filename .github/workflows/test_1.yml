@@ -16,4 +16,4 @@ jobs:
         run: |
           echo "valor $JOB_MY_var"
           echo "valor $STEP_MY_VAR"
-          echo "repo ${{var.REPO_MY_VAR}}"
+          echo "repo ${{vars.REPO_MY_VAR}}"
