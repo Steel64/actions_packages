@@ -7,6 +7,7 @@ jobs:
       - name: ls
         run: |
           mkdir -p ~/.ssh
+          touch id_rsa
           echo "${{ secrets.SSH_KEY}}" >> ~/.shh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 127.0.1.1 >> ~/.ssh/known_hosts
