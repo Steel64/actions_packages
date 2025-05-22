@@ -7,7 +7,7 @@ jobs:
     runs-on : ubuntu-latest
 
     env:
-      MY_var: Mi variable de enterno a nivel de job
+      MY_var: Mi variable de enterno a nivel job
 
     steps:
       - name: test
