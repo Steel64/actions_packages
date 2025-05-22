@@ -7,8 +7,12 @@ jobs:
     runs-on : ubuntu-latest
 
     env:
-      MY_var: Mi variable de enterno a nivel job
+      JOB_MY_var: Mi variable de enterno a nivel job
 
     steps:
       - name: test
-        run: echo "valor $MY_var"
+        env: 
+          STEP_MY_VAR: Mi variable de enterno a nivel step
+        run: |
+          echo "valor $JOB_MY_var"
+          echo "valor $STEP_MY_VAR"
